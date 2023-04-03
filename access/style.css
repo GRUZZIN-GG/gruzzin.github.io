@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body {
+    width: 100%;
+    background: #050801;
+    display: flex;
+    justify-content: center;
+}
+
+.videofon {
+    position: fixed;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: vidfon 4.5s forwards;
+}
+
+@keyframes vidfon {
+    0%{opacity: 0;}
+    50%{opacity: 0.4;}
+    100%{opacity: 1;}
+}
+
+.btn {
+    outline: none;
+    border: 0;
+    font-size: 24px;
+    position: absolute;
+    background: none;
+    color: #fff;
+    left: 45%;
+    top:3%;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.btn:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.5s;
+}
+
+header, nav, .navigation {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+}
+
+header {
+    opacity: 0;
+    animation: head 6s forwards;
+}
+
+@keyframes head {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.Logo {
+    color: rgb(240, 234, 234);
+    font-size: 24px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20em;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color:rgb(240, 234, 234);
+}
+
+.navigation li a:hover {
+    color: #04c1da;
+    transition-duration: 0.5s;
+}
+
+.navigation li {
+    list-style: none;
+    display: inline;
+    margin: 20px;
+}
+
+main {
+    margin-top: 15%;
+    width: 90%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.item {
+    width: 350px;
+    height: 250px;
+    background: #050801;
+    opacity: 0.8;
+    border-radius: 25px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    transform: translateY(-400%);
+    animation: example 4s forwards;
+}
+
+@keyframes example {
+    0%{transform: translateY(-400%);}
+    50%{transform: translateY(0%);}
+    60%{transform:translateY(-5%);}
+    100%{transform: translateY(0%);}
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.1em;
+}
+
+.item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.1em;
+}
